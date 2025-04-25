@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Application</title>
+
+    <!-- Tailwind Link -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Main container for overall app -->
+    <div class="container">
+        <div class="toDoApp">
+            <h1>To Do App</h1>
+            <form action="" class="inputArea">
+                <input type="text" id="text" placeholder="Add a new task">
+                <button type="submit"><i class="fa-solid fa-plus fa-2xs"></i></button>
+            </form>
+            <div class="to-doContainer">
+                <ul id="task-list"></ul>
+                <img src="./Images/empty.png" alt="empty" loading="lazy">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+
+</html>
