@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "Cascadia", sans-serif;
+    src: url(./Fonts/CascadiaMono-Regular.ttf);
+}
+body{
+    font-family: "Cascadia", sans-serif;
+    background-image: url(./Images/bg.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: white;
+}
+.toDoApp{
+    max-width: 400px;
+    color: white;
+    border-radius: 14px;
+    box-shadow: 4px 11px 16px 0px rgba(255, 255, 255, 0.541);
+    border: 3px solid  rgb(167, 34, 144);
+}
+.inputArea input{
+    border: none;
+    outline: none;
+    background-color: rgb(202, 90, 183);
+    color: white;
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.445);
+}
