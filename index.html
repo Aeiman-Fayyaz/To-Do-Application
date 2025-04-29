@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Sweetalert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.all.min.js">
+    </script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.min.css
+    " rel="stylesheet">
 </head>
 
 <body>
@@ -26,13 +32,16 @@
     <div class="container d-flex justify-content-center align-items-center w-100 h-100 pt-5 ">
         <div class="toDoApp w-100 d-flex align-items-center justify-content-center flex-column">
             <h1 class="display-4">To Do App</h1>
-            <form action="" class="inputArea ps-4 d-flex justify-content-between w-100">
-                <input type="text" id="text" class="border-0 fs-5 rounded-4 p-2" placeholder="Add a new task">
-                <button type="submit" class="w-auto" style="width: 500px;"><i class="fa-solid fa-plus"></i></button>
-            </form>
-            <div class="to-doContainer">
-                <ul id="task-list"></ul>
-                <img src="./Images/empty.png" alt="empty" loading="lazy" style="width: 250px;">
+            <div>
+                <form action="" class="inputArea ps-3 gap-3 d-flex justify-content-between w-100">
+                    <input type="text" id="text" class="border-0 fs-5 rounded-pill p-2" placeholder="Add a new task">
+                    <button type="submit" id="task-add-btn" class="btn-plus"><i
+                            class="fa-solid fa-plus plus-btn"></i></button>
+                </form>
+            </div>
+            <div class="to-doContainer w-100 d-flex justify-content-center align-items-center">
+                <ul id="taskList" class="w-100 list-unstyled rounded-pill p-2"></ul>
+                <img src="./Images/empty.png" class="empty-img" alt="empty" loading="lazy" style="width: 250px;">
             </div>
         </div>
     </div>
