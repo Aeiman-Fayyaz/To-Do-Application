@@ -40,8 +40,22 @@ body{
 .btn-plus:hover{
  background-color: rgb(167, 34, 144);   
 }
+ul{
+    list-style: none;
+    padding: 10px;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 350px;
+    ::-webkit-scrollbar{
+        width: 2px;
+    }
+}
 #taskList{
-    padding: 10px ;
+    padding: 10px;
+}
+
+#taskiList ul li::-webkit-scrollbar{
+    display: block;
 }
 #taskList li{
     display: flex;
@@ -51,7 +65,7 @@ body{
     width: 100%;
     margin-bottom: 15px;
     background-color: rgba(178, 97, 164, 0.614);
-    border-radius: 10px;
+    border-radius: 4px;
     padding: 10px 20px;
     font-size: larger;
 }
