@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // UI Elements
+    // Getting Elements
     const welcomeScreen = document.getElementById("welcome-screen");
     const startBtn = document.getElementById("start-btn");
     const mainContainer = document.getElementById("main-container");
@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggleBtn = document.getElementById("theme-toggle");
     const body = document.body;
 
-    // Array to store tasks
+    // LOcal Storage
     let tasks = [];
 
-    // --- Theme Toggle Logic ---
+    // Theme Toggle Function
 
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
@@ -28,10 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             localStorage.setItem('theme', 'dark');
         }
     });
-
-
-    // --- Utility Functions ---
-
+    // Time Showing Functions 
     const timeAgo = (timestamp) => {
         const seconds = Math.floor((new Date() - new Date(timestamp)) / 1000);
         let interval = seconds / 31536000;
@@ -46,12 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (interval > 1) return Math.floor(interval) + " minutes ago";
         return Math.floor(seconds) + " seconds ago";
     };
-
     const saveTasks = () => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
         updateEmptyState();
     };
-
     const loadTasks = () => {
         const storedTasks = localStorage.getItem("tasks");
         if (storedTasks) {
@@ -59,7 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
             renderTasks();
         }
     };
-
     const updateEmptyState = () => {
         if (tasks.length === 0) {
             emptyState.style.display = "block";
@@ -67,9 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             emptyState.style.display = "none";
         }
     };
-
-    // --- UI Rendering Functions ---
-
+    // UI Rendering Functions
     const renderTask = (task, index) => {
         const li = document.createElement("li");
 
@@ -108,8 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, 60000);
 
-    // --- Core Logic Functions ---
-
+    // Add Task Functions
     const addTask = () => {
         const taskText = taskInput.value.trim();
         if (!taskText) {
@@ -141,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
             color: "var(--clr-text-primary)"
         });
     };
-
+    // Task Marking Complete Function
     const toggleComplete = async (index) => {
         const task = tasks[(tasks.length - 1) - index];
         const confirmation = await Swal.fire({
@@ -168,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
-
+    // Edit Function
     const editTask = async (index) => {
         const task = tasks[(tasks.length - 1) - index];
         if (task.completed) return;
@@ -201,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     };
-
+    // Delete Function
     const deleteTask = async (index) => {
         const taskToDelete = tasks[(tasks.length - 1) - index];
         const confirmation = await Swal.fire({
@@ -232,8 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // --- Event Listeners and Initial Load ---
-
+    // Event Listeners and Initial Load 
     startBtn.addEventListener("click", () => {
         welcomeScreen.style.display = "none";
         mainContainer.style.display = "flex";
@@ -241,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Swal.fire({
             title: "Welcome!",
             text: "Your to-do list is ready. Start adding tasks!",
-            icon: "info",
+            icon: "success",
             showConfirmButton: false,
             timer: 2000,
             background: "var(--clr-card)",
