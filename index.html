@@ -5,28 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do Application</title>
-
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
+    <!-- Animation AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
+    <!-- Fonts Aweosme -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.all.min.js"></script>
-
+    <!-- Our CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Theme button -->
     <button id="theme-toggle" aria-label="Toggle theme">
         <i class="fa-solid fa-moon"></i>
         <i class="fa-solid fa-sun"></i>
     </button>
-    
+    <!-- Welcome container -->
     <div class="welcome-container" id="welcome-screen">
         <div class="welcome-card" data-aos="zoom-in">
             <h1 class="welcome-title">Welcome to Your To-Do App!</h1>
@@ -36,7 +37,7 @@
             </button>
         </div>
     </div>
-
+    <!-- Main Home Container -->
     <div class="main-container" id="main-container">
         <div class="to-do-app" data-aos="fade-up">
             <h1 class="app-title">To-Do List</h1>
@@ -56,7 +57,7 @@
             </div>
         </div>
     </div>
-
+    <!-- Script Animation AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -65,7 +66,7 @@
             once: true,
         });
     </script>
-
+    <!-- Our JS -->
     <script src="app.js"></script>
 </body>
 
